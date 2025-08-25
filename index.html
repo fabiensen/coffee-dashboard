@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Coffee Price Analysis – August 25, 2025</title>
+<style>
+  :root{
+    --bg:#f8f9fa; --fg:#2c3e50; --muted:#7f8c8d;
+    --card:#ffffff; --shadow:0 4px 10px rgba(0,0,0,.08);
+    --bull:#ffe5e5; --neut:#fff9e5; --bear:#e5ffe5;
+    --hdr:#34495e; --hdrfg:#fff;
+
+    /* badge colors */
+    --ok:#d1fae5;       /* green-ish */
+    --warn:#fef3c7;     /* amber-ish */
+    --danger:#fee2e2;   /* red-ish */
+    --info:#e0f2fe;     /* blue-ish */
+    --neutral:#e5e7eb;  /* gray-ish */
+  }
+
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#333;margin:24px}
+  h1,h2{color:var(--fg);text-align:center;margin:12px 0}
+  .card{background:var(--card);border-radius:12px;box-shadow:var(--shadow);overflow:hidden;margin:18px auto;max-width:1200px}
+  table{width:100%;border-collapse:separate;border-spacing:0}
+  th,td{padding:14px 16px;text-align:left;vertical-align:top}
+  thead th{background:var(--hdr);color:var(--hdrfg);font-weight:600}
+  tbody tr:nth-child(even) td{background:#f3f4f6}
+  tbody tr.bullish td{background:var(--bull)}
+  tbody tr.neutral td{background:var(--neut)}
+  tbody tr.bearish td{background:var(--bear)}
+
+  .wrap{max-width:1200px;margin:0 auto}
+  .section{margin-top:12px}
+
+  .summary{font-weight:700;text-align:center;color:var(--fg);padding:12px}
+  .interpretation{color:var(--fg);text-align:center;max-width:900px;margin:8px auto 0;line-height:1.55}
+
+  /* Badges */
+  .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.85em;font-weight:600;line-height:1}
+  .b-ok{background:var(--ok);color:#065f46}
+  .b-warn{background:var(--warn);color:#92400e}
+  .b-danger{background:var(--danger);color:#991b1b}
+  .b-info{background:var(--info);color:#075985}
+  .b-neutral{background:var(--neutral);color:#374151}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:600;font-size:.85em}
+
+  .legend{font-size:.9em;color:var(--muted);text-align:center;margin-top:6px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h1>Coffee Price Analysis – August 25, 2025</h1>
+
+  <!-- Fundamentals -->
+  <div class="card section">
+    <h2>Fundamentals</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Factor</th>
+          <th>Signal</th>
+          <th>Score</th>
+          <th>Extended Reasoning</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bullish">
+          <td>COT – Commercial Traders</td>
+          <td>🔴</td>
+          <td>3</td>
+          <td>Commercial traders are holding significant long positions, showing confidence in rising prices. This reflects supply concerns and strong demand expectations over the coming weeks. Sustained buying activity indicates insiders anticipate upward pressure.</td>
+          <td>2025-08-25 08:00 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>COT – Non-Commercial / Speculators</td>
+          <td>🟡</td>
+          <td>2</td>
+          <td>Speculators remain balanced, neither heavily long nor short. This neutral stance shows a wait-and-see approach amid uncertain market conditions. No speculative panic or euphoria is observed.</td>
+          <td>2025-08-25 08:00 CEST</td>
+        </tr>
+        <tr class="bullish">
+          <td>Weather – Brazil</td>
+          <td>🔴</td>
+          <td>3</td>
+          <td>Below-average rainfall and intermittent cold events in Minas Gerais threaten yield/quality. Anticipated lower output raises scarcity risk and supports higher Arabica premiums. Buyers hedge forward needs, lifting near-term price pressure.</td>
+          <td>2025-08-25 07:30 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>Weather – Vietnam</td>
+          <td>🟡</td>
+          <td>2</td>
+          <td>Key Robusta regions report seasonally typical conditions with manageable moisture profiles. No material harvest/flow disruptions are flagged, keeping the supply outlook broadly stable in the short term.</td>
+          <td>2025-08-25 07:30 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>Weather – Colombia</td>
+          <td>🟡</td>
+          <td>2</td>
+          <td>Seasonal patterns prevail across major Arabica areas. Output continuity and quality risks look contained for now, leaving price pressure neutral from this driver.</td>
+          <td>2025-08-25 07:30 CEST</td>
+        </tr>
+        <tr class="bullish">
+          <td>Arabica Futures (NY ICE)</td>
+          <td>🔴</td>
+          <td>3</td>
+          <td>Recent strength reflects tightening supply expectations and active risk hedging. Futures typically lead physical quotations; the persistent bid under nearby contracts adds to bullish momentum.</td>
+          <td>2025-08-25 09:00 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>Robusta Futures (London ICE)</td>
+          <td>🟡</td>
+          <td>2</td>
+          <td>Robusta trades in a contained range, implying balanced flows from Vietnam and other origins. With volatility muted, its influence on the composite price remains neutral near term.</td>
+          <td>2025-08-25 09:00 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>Port Stocks (NY / London / Santos)</td>
+          <td>🟡</td>
+          <td>2</td>
+          <td>Reported inventories hover around typical levels. While drawdowns are possible if Brazil weather worsens, current availability tempers immediate upside risks.</td>
+          <td>2025-08-25 06:45 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>Logistics & Geopolitics</td>
+          <td>🟡</td>
+          <td>2</td>
+          <td>Export programs and shipping lanes show no new systemic bottlenecks. Freight rates and turnaround times are within recent norms, keeping this component neutral.</td>
+          <td>2025-08-25 06:45 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>USD vs Producer FX</td>
+          <td>🟡</td>
+          <td>2</td>
+          <td>Dollar levels versus BRL and others are broadly stable, limiting currency-based amplification of price moves. FX impact on USD coffee quotations is neutral for now.</td>
+          <td>2025-08-25 08:15 CEST</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="summary">Overall Price Pressure Index: <strong>Moderate Upward Pressure</strong></div>
+    <div class="interpretation">
+      Bullish cues from commercial positioning, Brazilian weather risk, and firm Arabica futures keep the balance tilted upward. Other pillars (Robusta, port stocks, logistics, FX) remain stabilizers. Short-term momentum looks stretched, so pullbacks are possible even within an uptrend.
+    </div>
+  </div>
+
+  <!-- Technical Analysis with badges -->
+  <div class="card section">
+    <h2>Technical Analysis – Futures</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Contract</th>
+          <th>Current Price</th>
+          <th>RSI</th>
+          <th>10-day SMA</th>
+          <th>Bollinger Bands (20,2)</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bullish">
+          <td>Arabica (NY)</td>
+          <td>$3.74</td>
+          <td>
+            <!-- RSI badge logic sample: >70 danger, <30 info (oversold), else warn/neutral -->
+            <span class="badge b-danger">RSI 72 · Overbought</span>
+          </td>
+          <td>
+            <span class="chip">↑ Above 10-SMA</span>
+          </td>
+          <td>
+            <!-- Bollinger position badge examples -->
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="badge b-warn">Near Upper</span>
+              <span class="badge b-neutral">Mid: $3.60</span>
+              <span class="badge b-neutral">Upper: $3.80 · Lower: $3.40</span>
+            </div>
+          </td>
+          <td>2025-08-25 09:00 CEST</td>
+        </tr>
+        <tr class="neutral">
+          <td>Robusta (London)</td>
+          <td>$2.05</td>
+          <td>
+            <span class="badge b-neutral">RSI 55 · Neutral</span>
+          </td>
+          <td>
+            <span class="chip">→ Near 10-SMA</span>
+          </td>
+          <td>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span class="badge b-neutral">Mid: $2.05</span>
+              <span class="badge b-neutral">Upper: $2.12 · Lower: $1.98</span>
+              <span class="badge b-ok">Inside Bands</span>
+            </div>
+          </td>
+          <td>2025-08-25 09:00 CEST</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="legend">
+      <strong>Badges:</strong>
+      <span class="badge b-danger">RSI &gt; 70 Overbought</span>
+      <span class="badge b-info">RSI &lt; 30 Oversold</span>
+      <span class="badge b-neutral">30–70 Neutral</span>
+      ·
+      <span class="chip">↑ Above 10-SMA</span>
+      <span class="chip">→ Near 10-SMA</span>
+      <span class="chip">↓ Below 10-SMA</span>
+      ·
+      <span class="badge b-warn">Near Upper</span>
+      <span class="badge b-ok">Inside Bands</span>
+      <span class="badge b-warn">Near Lower</span>
+      <span class="badge b-danger">Above Upper / Below Lower</span>
+    </div>
+  </div>
+
+  <div class="legend">Timestamps are static and reflect when data was captured (CEST). Add an NY time note if desired, e.g., “09:00 CEST / 03:00 EDT”.</div>
+</div>
+
+</body>
+</html>
