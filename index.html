@@ -5,151 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Market Dashboard</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.5;
-    }
-
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .table-container {
-      overflow-x: auto;
-      margin-bottom: 30px;
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      min-width: 800px;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: left;
-      font-size: 14px;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f0f0f0;
-    }
-
-    /* Color coding */
-    .bullish {
-      background: #d4edda;
-    }
-    .bearish {
-      background: #f8d7da;
-    }
-    .neutral {
-      background: #fff3cd;
-    }
-
-    /* Responsive text */
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
-      h1, h2 {
-        font-size: 20px;
-      }
-      th, td {
-        font-size: 12px;
-        padding: 6px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 18px;
-      }
-      h2 {
-        font-size: 16px;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:20px; background:#f9f9f9; color:#333; line-height:1.5; }
+    h1,h2 { text-align:center; margin-bottom:10px; }
+    h3 { text-align:center; margin-top:0; color:#666; }
+    .table-container { overflow-x:auto; margin-bottom:30px; background:white; padding:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    table { border-collapse: collapse; width:100%; min-width:800px; }
+    th, td { border:1px solid #ddd; padding:10px; text-align:left; font-size:14px; vertical-align:top; }
+    th { background:#f0f0f0; }
+    .bullish { background:#d4edda; }
+    .bearish { background:#f8d7da; }
+    .neutral { background:#fff3cd; }
+    @media (max-width:768px){ body{padding:10px;} h1,h2{font-size:20px;} th,td{font-size:12px; padding:6px;} }
+    @media (max-width:480px){ h1{font-size:18px;} h2{font-size:16px;} }
   </style>
 </head>
 <body>
   <h1>☕ Coffee Market Dashboard</h1>
+  <h3>Update: 27 August 2025</h3>
 
   <h2>Fundamentals</h2>
   <div class="table-container">
     <table>
       <tr>
-        <th>Factor</th>
-        <th>Signal</th>
-        <th>Score</th>
-        <th>Reasoning</th>
-        <th>Timestamp</th>
+        <th>Factor</th><th>Signal</th><th>Score</th><th>Reasoning</th><th>Last Update</th>
       </tr>
-      <tr class="bullish">
-        <td>COT Report</td>
-        <td>Bullish</td>
-        <td>2</td>
-        <td>The latest Commitment of Traders (COT) report shows managed money funds expanding their net long positions in Arabica. This suggests speculative capital is increasingly betting on higher prices. Historically, a rise in speculative length has coincided with upward price momentum, especially when paired with tightening supply fundamentals. However, extreme long positions can also set up markets for sharp corrections if sentiment shifts.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
-      <tr class="bearish">
-        <td>Brazil Weather</td>
-        <td>Bearish</td>
-        <td>3</td>
-        <td>Recent rainfall across Minas Gerais and São Paulo has significantly improved soil moisture and flowering prospects. This reduces the risk of a poor 2026/27 crop cycle. With Brazil being the world’s top exporter, favorable agronomic conditions often translate into strong supply expectations. Unless unexpected frosts or droughts return, this factor exerts bearish pressure by easing concerns over tight availability.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
-      <tr class="neutral">
-        <td>Colombia Weather</td>
-        <td>Neutral</td>
-        <td>0</td>
-        <td>Colombia’s main harvest areas report stable weather, with no immediate threats of excessive rain or prolonged drought. While rust disease is always a latent risk in humid regions, current conditions appear balanced. Thus, Colombian production outlook remains steady, offering neither strong bullish nor bearish impulses for the global market.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
-      <tr class="bullish">
-        <td>Vietnam Weather</td>
-        <td>Bullish</td>
-        <td>1</td>
-        <td>Vietnam, the largest robusta producer, is facing drier-than-usual weather. Water stress during key development stages can reduce bean size and yield. Lower robusta output has a twofold effect: it directly tightens robusta supply, and it indirectly lifts Arabica demand as roasters rebalance blends. This creates a supportive undertone for prices in both markets.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
-      <tr class="bearish">
-        <td>Port Stocks</td>
-        <td>Bearish</td>
-        <td>2</td>
-        <td>ICE-certified stocks have increased modestly in recent weeks, providing a buffer for near-term physical delivery needs. While absolute levels are still historically low, any build in certified inventories tends to reduce panic buying. This places downward pressure on futures as immediate supply concerns are partially alleviated.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
-      <tr class="neutral">
-        <td>Logistics</td>
-        <td>Neutral</td>
-        <td>0</td>
-        <td>Container availability and freight rates remain broadly stable. Unlike 2021–2022, when shipping bottlenecks amplified coffee tightness, current logistics flows are relatively smooth. Therefore, transport issues are not adding volatility to the market at this stage, leaving the factor neutral for price action.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
-      <tr class="bearish">
-        <td>USD Exchange Rate</td>
-        <td>Bearish</td>
-        <td>1</td>
-        <td>The US dollar has strengthened against a basket of emerging market currencies, including the Brazilian real. Since coffee is traded globally in USD, a stronger dollar usually pressures commodities lower by making them more expensive in local terms. Additionally, a weaker BRL encourages Brazilian producers to accelerate exports, adding near-term supply to the global market.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
-      <tr class="bullish">
-        <td>Global Demand</td>
-        <td>Bullish</td>
-        <td>2</td>
-        <td>Despite macroeconomic uncertainty, coffee consumption remains resilient. Europe reports steady imports, and Asian markets — especially South Korea and China — are expanding specialty coffee demand. Post-pandemic shifts toward at-home brewing have also structurally increased baseline demand. This resilience underpins a bullish floor for prices even when supply pressures ease.</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
-      </tr>
+      <!-- 8 storici -->
+      <tr class="bullish"><td>COT Report</td><td>Bullish</td><td>2</td><td>Speculators increased net longs (CFTC, Aug 19), supporting bullish sentiment.</td><td>2025-08-27</td></tr>
+      <tr class="bearish"><td>Brazil Weather</td><td>Bearish</td><td>3</td><td>Frosts and low yields risk; some rains moderate impact.</td><td>2025-08-27</td></tr>
+      <tr class="neutral"><td>Colombia Weather</td><td>Neutral</td><td>0</td><td>Seasonal conditions, no major disruptions.</td><td>2025-08-27</td></tr>
+      <tr class="bullish"><td>Vietnam Weather</td><td>Bullish</td><td>1</td><td>Persistent dryness in Central Highlands affecting robusta crop.</td><td>2025-08-27</td></tr>
+      <tr class="bearish"><td>Port Stocks</td><td>Bearish</td><td>2</td><td>ICE certified stocks slightly up from July lows (last data Aug 22).</td><td>2025-08-27</td></tr>
+      <tr class="neutral"><td>Logistics</td><td>Neutral</td><td>0</td><td>No significant freight disruptions reported.</td><td>2025-08-27</td></tr>
+      <tr class="bearish"><td>USD Exchange Rate</td><td>Bearish</td><td>1</td><td>Strong USD limits demand, weak BRL encourages exports.</td><td>2025-08-27</td></tr>
+      <tr class="bullish"><td>Global Demand</td><td>Bullish</td><td>2</td><td>Firm consumption in Europe/Asia, resilient despite macro risks.</td><td>2025-08-27</td></tr>
+
+      <!-- 6 nuovi -->
+      <tr class="neutral"><td>Arabica–Robusta Spread</td><td>Neutral</td><td>0</td><td>Spread at ~$1.10/lb, steady vs July; no major substitution effect.</td><td>2025-08-27</td></tr>
+      <tr class="bearish"><td>ICE Stocks (Quality)</td><td>Bearish</td><td>1</td><td>Certified stocks rose slightly; washed arabica proportion still low (Aug report).</td><td>2025-08-22</td></tr>
+      <tr class="bullish"><td>Brazil/Colombia/Vietnam Exports</td><td>Bullish</td><td>2</td><td>Brazil exports down 20% YoY in July (Cecafé); Vietnam shipments lag 15% YoY.</td><td>2025-08-15</td></tr>
+      <tr class="neutral"><td>Domestic Consumption (Brazil)</td><td>Neutral</td><td>0</td><td>Stable internal demand; 2025 projection unchanged at ~22m bags (ABIC).</td><td>2025-07-30</td></tr>
+      <tr class="bearish"><td>Fertilizers & Energy Costs</td><td>Bearish</td><td>1</td><td>Fertilizer costs eased from 2022 highs; energy costs stable, reducing production stress.</td><td>2025-08-10</td></tr>
+      <tr class="bearish"><td>Trade Policies / Tariffs</td><td>Bearish</td><td>3</td><td>US 50% tariff on Brazilian arabica effective Aug 6 drives strong price rally.</td><td>2025-08-22</td></tr>
+      <tr class="neutral"><td>Macro Environment</td><td>Neutral</td><td>0</td><td>Global PMI stable near 50, US rates steady; macro neither supportive nor bearish.</td><td>2025-08-26</td></tr>
     </table>
   </div>
 
@@ -157,36 +54,39 @@
   <div class="table-container">
     <table>
       <tr>
-        <th>Contract</th>
-        <th>Price</th>
-        <th>RSI</th>
-        <th>SMA (10d)</th>
-        <th>Bollinger Bands</th>
-        <th>Timestamp</th>
+        <th>Contract</th><th>Price</th><th>RSI</th><th>Stochastic</th><th>MACD</th><th>ADX</th><th>Notes</th><th>Last Update</th>
       </tr>
       <tr>
-        <td>Arabica</td>
-        <td>165.40</td>
-        <td>54 (Neutral)</td>
-        <td>Trading above the 10-day SMA, showing near-term upward bias</td>
-        <td>162.5 / 165.4 / 168.2</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
+        <td>Arabica (Coffee C)</td>
+        <td>$3.74/lb</td>
+        <td>51.1 (Neutral)</td>
+        <td>47.8 Neutral / Stoch RSI 19.5 Oversold</td>
+        <td>1.44 (Buy)</td>
+        <td>15.4 (Weak trend)</td>
+        <td>Trading near upper Bollinger Band; above 10d SMA</td>
+        <td>2025-08-27</td>
       </tr>
       <tr>
         <td>Robusta</td>
-        <td>2625</td>
-        <td>61 (Slightly Overbought)</td>
-        <td>Hovering near the 10-day SMA, suggesting limited momentum</td>
-        <td>2580 / 2625 / 2670</td>
-        <td>2025-08-25 14:00 CEST / 08:00 EDT</td>
+        <td>$2625/ton</td>
+        <td>~57 (Slightly bullish)</td>
+        <td>Mid-range</td>
+        <td>Flat (Neutral)</td>
+        <td>~18 (Weak trend)</td>
+        <td>Hovering near SMA; Bollinger mid-band</td>
+        <td>2025-08-27</td>
       </tr>
     </table>
   </div>
 
   <h2>Summary</h2>
   <div class="table-container">
-    <p><b>Overall Market Pressure:</b> Neutral with a mild bullish tilt.<br><br>
-    Brazil’s favorable weather is strongly bearish, but ongoing dryness in Vietnam offsets some of that supply comfort. Demand remains resilient globally, and speculative funds are leaning bullish. Technical indicators suggest Arabica is holding above support while Robusta approaches overbought territory. Macro headwinds from a stronger USD keep a lid on excessive rallies, but the balance of factors still leans slightly to the upside in the near term.</p>
+    <p><b>Overall Market Pressure:</b> Neutral-bullish.<br><br>
+    Arabica remains elevated around $3.74/lb, with strong speculative positioning and weather risks in Brazil and Vietnam supporting the market. US tariffs on Brazilian arabica amplify the bullish tone.  
+    However, the stronger USD and slight ICE stock recovery temper the upside.  
+    Technical indicators show balanced momentum: MACD is bullish, RSI neutral, and ADX weak, suggesting consolidation rather than breakout.  
+    Export slowdowns from Brazil and Vietnam reinforce supply concerns, while global demand remains resilient.  
+    Net outlook: continued firmness with potential volatility spikes driven by tariff news and weather shocks.</p>
   </div>
 </body>
 </html>
